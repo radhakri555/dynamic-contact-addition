@@ -8,30 +8,21 @@ class PhoneNumberComponent extends React.Component {
     this.state = {
       data: props.data
     };
-    //this.addNew = this.addNew.bind(this);
-    //this.removeItem = this.removeItem.bind(this);
   }
   componentDidMount() {}
 
   addNew = () => {
-    console.log("hi");
     this.setState({ data: [...this.state.data, { id: 355 }] });
-    console.log(this.state.data);
   };
 
   removeItem = i => {
-    console.log("test", i);
     let items = this.state.data;
     let updatedItems = items
       .slice(0, i - 1)
       .concat(items.slice(i, items.length));
-    console.log(updatedItems);
     this.setState({
       data: [...updatedItems]
     });
-
-    //this.setState({
-    //data: updatedItems});
   };
   render() {
     //let props = this.props;
