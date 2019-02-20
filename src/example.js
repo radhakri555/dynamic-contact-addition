@@ -8,8 +8,8 @@ class PhoneNumberComponent extends React.Component {
     this.state = {
       data: props.data
     };
-    this.addNew = this.addNew.bind(this);
-    this.removeItem = this.removeItem.bind(this);
+    //this.addNew = this.addNew.bind(this);
+    //this.removeItem = this.removeItem.bind(this);
   }
   componentDidMount() {}
 
@@ -26,6 +26,9 @@ class PhoneNumberComponent extends React.Component {
       .slice(0, i - 1)
       .concat(items.slice(i, items.length));
     console.log(updatedItems);
+    this.setState({
+      data: [...updatedItems]
+    });
 
     //this.setState({
     //data: updatedItems});

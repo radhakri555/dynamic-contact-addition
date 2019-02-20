@@ -6,6 +6,11 @@ class PhoneNumberEntry extends React.Component {
     super(props);
     console.log(props);
   }
+
+  handleClick = index => {
+    console.log("child", index);
+    this.props.removeItem(index);
+  };
   render() {
     //let props = this.props;
     let labelStyle = {
@@ -41,7 +46,7 @@ class PhoneNumberEntry extends React.Component {
           <Grid.Column width={2}>
             <Button
               color="red"
-              onClick={this.props.removeItem(this.props.index)}
+              onClick={e => this.handleClick(this.props.index)}
             >
               -
             </Button>
