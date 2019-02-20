@@ -36,15 +36,17 @@ class PhoneNumberComponent extends React.Component {
           <Card.Header>Phone Number</Card.Header>
         </Card.Content>
         <Card.Content>
-          {this.state.data.map((item, index) => {
-            return (
-              <PhoneNumberEntry
-                index={index}
-                item={item}
-                removeItem={this.removeItem}
-              />
-            );
-          })}
+          <div>
+            {this.state.data.map((item, index) => {
+              return (
+                <PhoneNumberEntry
+                  index={index}
+                  item={item}
+                  removeItem={this.removeItem}
+                />
+              );
+            })}
+          </div>
         </Card.Content>
       </Card>
     );
